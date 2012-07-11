@@ -12,6 +12,10 @@ class Book extends CI_Controller
 
    public function index()
    {
+      $this->load->model('post');
+
+      $list = $this->post->getPosts();
+
       $this->load->view('book');
    }
 }
