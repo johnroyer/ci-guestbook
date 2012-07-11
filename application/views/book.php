@@ -14,9 +14,14 @@
    </form>
 
    <hr>
+   
+   <?php foreach( $posts as $post): ?>
 
-   <p>somebody said:  blablabla ......</p>
+   <?php echo $post['id']; ?> said: <?php echo $post['comment']; ?>
 
    <hr>
+
+   <?php endforeach; ?>
+
 </body>
 </html>
