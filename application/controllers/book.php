@@ -15,7 +15,8 @@ class Book extends CI_Controller
       $this->load->model('post');
 
       $list = $this->post->getPosts();
+      $data['posts'] = $list;
 
-      $this->load->view('book');
+      $this->load->view('book', $data);
    }
 }
