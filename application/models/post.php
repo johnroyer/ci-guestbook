@@ -17,4 +17,14 @@ class Post extends CI_Model
       $query = $this->db->get('post');
       return $query->result_array();
    }
+
+   public function newPost($id, $comment)
+   {
+      $this->load->database();
+      $data = array(
+         'id' => $id,
+         'comment' => $comment
+      );
+      $this->db->insert('post', $data);
+   }
 }
