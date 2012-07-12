@@ -14,6 +14,9 @@ class Book extends CI_Controller
    {
       $this->load->model('post');
 
+      if( isset( $_POST['id'] ) ){
+      }
+
       $list = $this->post->getPosts();
       $data['posts'] = $list;
 
